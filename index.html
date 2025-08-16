@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Will be hacked by hacker</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --fg: #e5ffe5;
+      --accent: #00ff88;
+      --dim: #00a85a;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: radial-gradient(1200px 600px at 50% -20%, #0f291c 0%, var(--bg) 40%);
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    .wrap {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle scanline overlay */
+    .wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 100% 3px;
+      pointer-events: none;
+      mix-blend-mode: overlay;
+      animation: flicker 6s infinite steps(60);
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw + 1rem, 6rem);
+      line-height: 1.05;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-align: center;
+      margin: 0;
+      position: relative;
+      filter: drop-shadow(0 0 12px rgb
